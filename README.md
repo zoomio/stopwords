@@ -1,4 +1,10 @@
 # Stop Words
+
+[![Build Status](https://travis-ci.org/zoomio/stopwords.svg?branch=master)](https://travis-ci.org/zoomio/stopwords)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zoomio/stopwords)](https://goreportcard.com/report/github.com/zoomio/stopwords)
+[![Coverage](https://codecov.io/gh/zoomio/tagify/branch/master/graph/badge.svg)](https://codecov.io/gh/zoomio/stopwords)
+[![GoDoc](https://godoc.org/github.com/zoomio/tagify?status.svg)](https://godoc.org/github.com/zoomio/stopwords)
+
 List of stop-words for convenient consumption in Go projects.
 
 ## Usage
