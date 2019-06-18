@@ -1,11 +1,11 @@
 # Stop Words
 List of stop-words for convenient consumption in Go projects.
 
-## Usage ##
+## Usage
 
 * import `github.com/zoomio/stopwords` and it will have stop-words registered;
 * use `stopwords#IsStopWord` to check whether given string is a stop-word;
-* use `stopwords#Slice` to retriev a list of registered stop-words.
+* use `stopwords#Slice` to retrieve a list of registered stop-words.
 
 ## Changelog
 

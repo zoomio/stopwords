@@ -7,15 +7,15 @@ import (
 var (
 	// StopWordsIndex - vocabulary of stop-words for quick search on contains
 	stopWordsIndex = make(map[string]bool)
-	stopWords = make([]string, 0)
+	stopWords      = make([]string, 0)
 )
 
-func init()  {
-	RegisterStopWords(strings.Split(StopWords, "\n"))
+func init() {
+	registerStopWords(strings.Split(StopWords, "\n"))
 }
 
-// RegisterStopWords registers given list of stop-words to use as vocabulary.
-func RegisterStopWords(words []string) {
+// registerStopWords registers given list of stop-words to use as vocabulary.
+func registerStopWords(words []string) {
 	stopWords = append(stopWords, words...)
 	for _, s := range words {
 		stopWordsIndex[s] = true
