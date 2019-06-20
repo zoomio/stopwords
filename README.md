@@ -5,7 +5,8 @@
 [![Coverage](https://codecov.io/gh/zoomio/tagify/branch/master/graph/badge.svg)](https://codecov.io/gh/zoomio/stopwords)
 [![GoDoc](https://godoc.org/github.com/zoomio/tagify?status.svg)](https://godoc.org/github.com/zoomio/stopwords)
 
-List of stop-words for convenient consumption in Go projects.
+List of stop-words for convenient consumption in Go projects. 
+Full list of stop words can be found [here](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords.go).
 
 ## Usage
 
