@@ -26,3 +26,8 @@ func Test_Slice(t *testing.T) {
 	registerStopWords([]string{"foo", "bar"})
 	assert.Subset(t, Slice(), []string{"foo", "bar"})
 }
+
+func Test_Slice_NoDupes(t *testing.T) {
+	registerStopWords([]string{"foo", "foo"})
+	assert.Subset(t, Slice(), []string{"foo"})
+}

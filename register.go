@@ -17,11 +17,14 @@ func init() {
 // registerStopWords registers given list of stop-words to use as vocabulary.
 func registerStopWords(words []string) {
 	stopWords = make([]string, 0)
-	stopWords = append(stopWords, words...)
-
 	stopWordsIndex = make(map[string]bool)
 	for _, s := range words {
-		stopWordsIndex[s] = true
+		w := strings.TrimSpace(s)
+		if w == "" || stopWordsIndex[w] {
+			continue
+		}
+		stopWords = append(stopWords, w)
+		stopWordsIndex[w] = true
 	}
 }
 
