@@ -5,19 +5,19 @@ import (
 )
 
 var (
-	// StopWordsIndex - vocabulary of stop-words for quick search on contains
+	// StopWordsIndex - vocabulary of stop-words for quick search
 	stopWordsIndex map[string]bool
 	stopWords      []string
 )
 
 func init() {
+	stopWords = make([]string, 0)
+	stopWordsIndex = make(map[string]bool)
 	registerDefaultStopWords()
 }
 
 // registerStopWords registers given list of stop-words to use as vocabulary.
 func registerStopWords(words []string) {
-	stopWords = make([]string, 0)
-	stopWordsIndex = make(map[string]bool)
 	for _, s := range words {
 		w := strings.TrimSpace(s)
 		if w == "" || stopWordsIndex[w] {
@@ -28,9 +28,11 @@ func registerStopWords(words []string) {
 	}
 }
 
-// registerDefaultStopWords registers default stop words listed in `stopwords.go`.
+// registerDefaultStopWords registers default stop words
+// listed in `stopwords.go` and `stopwords_ru.go`.
 func registerDefaultStopWords() {
 	registerStopWords(strings.Split(StopWords, "\n"))
+	registerStopWords(strings.Split(StopWordsRu, "\n"))
 }
 
 // IsStopWord returns true if given string as a stop-word.
