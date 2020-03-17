@@ -16,6 +16,22 @@ func init() {
 	registerDefaultStopWords()
 }
 
+// Setup configures stpwords.
+func Setup(opts ...Option) {
+	c := &config{
+		words: make([][]string, 0),
+	}
+
+	// apply custom configuration
+	for _, option := range opts {
+		option(c)
+	}
+
+	for _, ws := range c.words {
+		registerStopWords(ws)
+	}
+}
+
 // registerStopWords registers given list of stop-words to use as vocabulary.
 func registerStopWords(words []string) {
 	for _, s := range words {
@@ -29,10 +45,9 @@ func registerStopWords(words []string) {
 }
 
 // registerDefaultStopWords registers default stop words
-// listed in `stopwords.go` and `stopwords_ru.go`.
+// listed in `stopwords.go`.
 func registerDefaultStopWords() {
-	registerStopWords(strings.Split(StopWords, "\n"))
-	registerStopWords(strings.Split(StopWordsRu, "\n"))
+	Setup(Words(StopWords))
 }
 
 // IsStopWord returns true if given string as a stop-word.

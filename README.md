@@ -6,7 +6,20 @@
 [![GoDoc](https://godoc.org/github.com/zoomio/tagify?status.svg)](https://godoc.org/github.com/zoomio/stopwords)
 
 List of stop-words for convenient consumption in Go projects. 
-Full list of stop words can be found [here](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords.go).
+
+Supported languages:
+
+* English - [StopWords](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords.go)
+* Russian - [StopWordsRu](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_ru.go)
+* Chinese - [StopWordsZh](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_zh.go)
+* Hindi - [StopWordsHi](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_hi.go)
+* Spanish - [StopWordsEs](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_es.go)
+* Arabic - [StopWordsAr](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_ar.go)
+* Japanese - [StopWordsJa](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_ja.go)
+* German - [StopWordsDe](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_de.go)
+* Hebrew - [StopWordsHe](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_he.go)
+* French - [StopWordsFr](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_fr.go)
+* Korean - [StopWordsKo](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_ko.go)
 
 ## Usage
 

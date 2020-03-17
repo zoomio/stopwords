@@ -1,6 +1,6 @@
 package stopwords
 
-// StopWords is a string with each stop-word on a new line.
+// StopWords is a string with each English stop-word on a new line.
 const StopWords = `
 'll
 've
