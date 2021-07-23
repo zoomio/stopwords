@@ -7,27 +7,32 @@ import (
 )
 
 func Test_registerStopWords(t *testing.T) {
-	registerStopWords([]string{"foo", "bar"})
-	assert.Subset(t, stopWords, []string{"foo", "bar"})
+	r := create()
+	registerStopWords([]string{"foo", "bar"}, r)
+	assert.Subset(t, r.stopWords, []string{"foo", "bar"})
 }
 
 func Test_IsStopWord(t *testing.T) {
-	registerStopWords([]string{"foo", "bar"})
-	assert.True(t, IsStopWord("foo"))
-	assert.True(t, IsStopWord("bar"))
+	r := create()
+	registerStopWords([]string{"foo", "bar"}, r)
+	assert.True(t, r.IsStopWord("foo"))
+	assert.True(t, r.IsStopWord("bar"))
 }
 
 func Test_IsStopWord_Negative(t *testing.T) {
-	registerStopWords([]string{"foo", "bar"})
-	assert.False(t, IsStopWord("bee"))
+	r := create()
+	registerStopWords([]string{"foo", "bar"}, r)
+	assert.False(t, r.IsStopWord("bee"))
 }
 
 func Test_Slice(t *testing.T) {
-	registerStopWords([]string{"foo", "bar"})
-	assert.Subset(t, Slice(), []string{"foo", "bar"})
+	r := create()
+	registerStopWords([]string{"foo", "bar"}, r)
+	assert.Subset(t, r.Slice(), []string{"foo", "bar"})
 }
 
 func Test_Slice_NoDupes(t *testing.T) {
-	registerStopWords([]string{"foo", "foo"})
-	assert.Subset(t, Slice(), []string{"foo"})
+	r := create()
+	registerStopWords([]string{"foo", "foo"}, r)
+	assert.Subset(t, r.Slice(), []string{"foo"})
 }
