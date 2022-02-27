@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.0
+
+- added domain names option to the stop-words, enabled via `WithDomains`.
+
 ## v0.6.0
 
 - BREAKING: from now on stopwords require `Setup()` in order to create an instance and use it.
