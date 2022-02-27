@@ -55,7 +55,7 @@ func Setup(opts ...Option) *Register {
 // registerStopWords registers given list of stop-words to use as vocabulary.
 func registerStopWords(words []string, reg *Register) {
 	for _, s := range words {
-		w := strings.TrimSpace(s)
+		w := strings.ToLower(strings.TrimSpace(s))
 		if w == "" || reg.stopWordsIndex[w] {
 			continue
 		}

@@ -18,4 +18,11 @@ var (
 			c.words = append(c.words, strings.Split(words, "\n"))
 		}
 	}
+	WithDomains = func(v bool) Option {
+		return func(c *config) {
+			if v {
+				c.words = append(c.words, strings.Split(Domains, "\n"))
+			}
+		}
+	}
 )
