@@ -13,9 +13,15 @@ type config struct {
 
 var (
 	// Words registers given word set.
-	Words = func(words string) Option {
+	Words = func(words []string) Option {
 		return func(c *config) {
-			c.words = append(c.words, strings.Split(words, "\n"))
+			c.words = append(c.words, words)
+		}
+	}
+	// Text splits provided text based on the sep.
+	Text = func(text, sep string) Option {
+		return func(c *config) {
+			c.words = append(c.words, strings.Split(text, sep))
 		}
 	}
 	WithDomains = func(v bool) Option {

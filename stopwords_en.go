@@ -1,7 +1,8 @@
 package stopwords
 
 // StopWords is a string with each English stop-word on a new line.
-const StopWords = `
+const (
+	StopWords = `
 'll
 've
 I 
@@ -726,3 +727,5 @@ yourselves
 z
 zero
 `
+	StopWordsEn = StopWords
+)

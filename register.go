@@ -67,5 +67,5 @@ func registerStopWords(words []string, reg *Register) {
 // registerDefaultStopWords registers default stop words
 // listed in `stopwords.go`.
 func registerDefaultStopWords() *Register {
-	return Setup(Words(StopWords))
+	return Setup(Text(StopWords, "\n"))
 }
