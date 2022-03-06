@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.10.0
+
+- bumped Go to 1.17.
 ## v0.9.0
 
 - added `WordsSlice` option to accept a slice of strings;
