@@ -12,8 +12,8 @@ type config struct {
 }
 
 var (
-	// Words registers given word set.
-	Words = func(words []string) Option {
+	// WordsSlice registers given word set.
+	WordsSlice = func(words []string) Option {
 		return func(c *config) {
 			c.words = append(c.words, words)
 		}
@@ -24,10 +24,16 @@ var (
 			c.words = append(c.words, strings.Split(text, sep))
 		}
 	}
+	// Words registers given word set.
+	Words = func(words string) Option {
+		return func(c *config) {
+			Text(words, "\n")(c)
+		}
+	}
 	WithDomains = func(v bool) Option {
 		return func(c *config) {
 			if v {
-				c.words = append(c.words, strings.Split(Domains, "\n"))
+				Text(Domains, "\n")(c)
 			}
 		}
 	}

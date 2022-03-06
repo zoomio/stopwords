@@ -6,6 +6,11 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func Test_Setup_noOptions(t *testing.T) {
+	r := Setup()
+	assert.Subset(t, r.stopWords, []string{"the", "an"})
+}
+
 func Test_registerStopWords(t *testing.T) {
 	r := create()
 	registerStopWords([]string{"foo", "bar"}, r)

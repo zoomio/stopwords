@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.8.0
+## v0.9.0
 
-- BREAKING: instead of accepting a string of words separated by the new line ("\n") `Words` now expects a slice of strings;
+- added `WordsSlice` option to accept a slice of strings;
 - added `Text` option, which accepts two strings, first is the string containing words divided by some separator and second argument is `sep`, to specify which separator devides the words.
 
 ## v0.7.0
