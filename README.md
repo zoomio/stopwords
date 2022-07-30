@@ -8,7 +8,7 @@ List of stop-words for convenient consumption in Go projects.
 
 Supported languages:
 
-* English - [StopWords](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords.go)
+* English - [StopWords](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_en.go)
 * Russian - [StopWordsRu](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_ru.go)
 * Chinese - [StopWordsZh](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_zh.go)
 * Hindi - [StopWordsHi](https://raw.githubusercontent.com/zoomio/stopwords/master/stopwords_hi.go)
