@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.11.0
+
+- introduced `Index` method, which returns a copy of the map of all registered stop-words;
+- bumped Go to 1.18.
+
 ## v0.10.0
 
 - bumped Go to 1.17.

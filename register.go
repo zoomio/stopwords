@@ -16,9 +16,18 @@ func (r *Register) IsStopWord(s string) bool {
 	return r.stopWordsIndex[s]
 }
 
-// Slice returns list of all registered stop-words.
+// Slice returns a copy of the list of all registered stop-words.
 func (r *Register) Slice() []string {
 	return append([]string(nil), r.stopWords...)
+}
+
+// Index returns a copy of the map of all registered stop-words.
+func (r *Register) Index() map[string]bool {
+	copy := make(map[string]bool, len(r.stopWordsIndex))
+	for k, v := range r.stopWordsIndex {
+		copy[k] = v
+	}
+	return copy
 }
 
 func create() *Register {
